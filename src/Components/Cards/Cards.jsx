@@ -1,4 +1,3 @@
-// 30 min mark for style guide
 import React from 'react'
 
 import CountUp from 'react-countup'

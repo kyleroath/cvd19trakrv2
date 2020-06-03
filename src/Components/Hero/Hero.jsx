@@ -19,7 +19,6 @@ const Hero = ({change, handleCountryChange}) => {
                     </div>
                 </div>
             </section>
-
     )
 }
 

@@ -60,7 +60,7 @@ const Chart = ({ data: {confirmed, deaths, recovered}, country}) => {
 
 
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto pb-24">
             {country ? barChart : lineChart}
         </div>
     )

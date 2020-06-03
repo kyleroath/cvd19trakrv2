@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header, Hero, Features, Footer, Alert, Cards, Chart} from './Components'
+import {Header, Hero, Guidelines, Footer, Alert, Cards, Chart} from './Components'
 import { fetchData } from './api'
 
 class App extends React.Component {
@@ -35,7 +35,7 @@ class App extends React.Component {
                 {!started && <Hero change={this.handleAlertOpen} handleCountryChange={this.handleCountryChange}/>}
                 <Cards data={data}/>
                 <Chart data={data} country={country}/>
-                <Features/>
+                <Guidelines/>
                 <Footer change={this.handleAlertOpen}/>
             </div>
         )
