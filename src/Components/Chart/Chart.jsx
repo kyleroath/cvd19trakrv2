@@ -4,21 +4,17 @@ import {Line, Bar} from 'react-chartjs-2'
 import {fetchDailyData} from '../../api'
 
 
-const Chart = ({ data: {confirmed, deaths, recovered}, country}) => {
-    const [dailyData, setDailyData] = useState([])
+const Chart = ({ data: {confirmed, deaths, recovered}, country, handleDaily, daily: dailyData}) => {
 
     useEffect(() => {
-        // eslint-disable-next-line 
-        const fetchAPI = (async () => {
-            const initialDailyData = await fetchDailyData()
-            setDailyData(initialDailyData)
-        })()
+        handleDaily()
     }, [])
+
 
     const lineChart = (
         dailyData.length 
         ? (
-        <Line 
+        <Line
          data={{
             labels: dailyData.map(({ date }) => date),
             datasets: [{
